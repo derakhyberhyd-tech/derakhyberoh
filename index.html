@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Derakhyber | Authentic Pakistani Restaurant</title>
-
+    <title>Dera Khyber Hyderabad | Authentic Restaurant</title>
     <style>
         * {
             margin: 0;
@@ -26,18 +24,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
             color: #d4a017;
+            letter-spacing: 1px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #d4a017;
         }
 
         .hero {
@@ -47,10 +54,8 @@
                 rgba(0, 0, 0, 0.55)
             ),
             url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1800&q=80");
-
             background-size: cover;
             background-position: center;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -64,13 +69,14 @@
         }
 
         .hero h1 {
-            font-size: 64px;
+            font-size: 52px;
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 22px;
             margin-bottom: 30px;
+            line-height: 1.5;
         }
 
         .button {
@@ -82,6 +88,11 @@
             font-weight: bold;
             border-radius: 5px;
             margin: 5px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #b8860b;
         }
 
         .section {
@@ -92,6 +103,7 @@
         .section h2 {
             font-size: 38px;
             margin-bottom: 20px;
+            color: #111;
         }
 
         .section p {
@@ -99,6 +111,54 @@
             margin: auto;
             line-height: 1.7;
             font-size: 18px;
+            color: #555;
+        }
+
+        .category-title {
+            font-size: 28px;
+            color: #d4a017;
+            margin: 40px auto 10px auto;
+            max-width: 1000px;
+            text-align: left;
+            border-bottom: 2px solid #d4a017;
+            padding-bottom: 5px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 30px auto;
+            text-align: left;
+        }
+
+        .menu-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #d4a017;
+        }
+
+        .menu-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .menu-item span {
+            color: #d4a017;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
         }
 
         footer {
@@ -116,7 +176,7 @@
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 36px;
             }
 
             nav a {
@@ -130,8 +190,7 @@
 <body>
 
     <header>
-        <div class="logo">DERAKHYBER</div>
-
+        <div class="logo">DERA KHYBER</div>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -142,46 +201,276 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Welcome to Derakhyber</h1>
-
-            <p>
-                Authentic flavors, traditional recipes, and unforgettable hospitality.
-            </p>
-
+            <h1>Welcome to Dera Khyber Hyderabad</h1>
+            <p>Authentic flavors, traditional Indian Hyderabadi and Pakistani recipes, and unforgettable hospitality.</p>
             <a href="#menu" class="button">View Menu</a>
             <a href="#contact" class="button">Visit Us</a>
         </div>
     </section>
 
     <section class="section" id="about">
-        <h2>Welcome to Derakhyber</h2>
-
+        <h2>About Our Restaurant</h2>
         <p>
-            Experience the rich flavors and traditions of South Asian cuisine
-            at Derakhyber. We bring authentic recipes, fresh ingredients,
+            Experience the rich culinary heritage and traditions of authentic South Asian cuisine 
+            at Dera Khyber Hyderabad. We bring time-honored Indian Hyderabadi and Pakistani recipes, fresh ingredients, 
             and warm hospitality together for an unforgettable dining experience.
         </p>
     </section>
 
-    <section class="section" id="menu">
-        <h2>Our Menu</h2>
+    <section class="section" id="menu" style="background: #fffdf7;">
+        <h2>Our Full Menu</h2>
+        <p>Explore our complete selection of freshly prepared dishes with traditional spices.</p>
+        
+        <!-- Tandoori -->
+        <h3 class="category-title">Tandoori</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Tikka <span>$9.99</span></h3>
+                <p>Boneless chicken marinated in Tandoori spices and cooked in a clay oven.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Leg Qt. <span>$8.99</span></h3>
+            </div>
+        </div>
 
-        <p>
-            Delicious dishes prepared with traditional flavors and fresh ingredients.
-            Our full menu will be available here.
-        </p>
+        <!-- Kabab -->
+        <h3 class="category-title">Kabab</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Kabab <span>$9.99</span></h3>
+                <p>Tender chicken kabab cooked with onions, ginger, pepper, chili, salt, and spices. One order comes with two pieces kebab.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Beef Kabab <span>$10.99</span></h3>
+                <p>A delicious beef kebab cooked with onion, ginger, pepper, chili, salt, and spices. One order comes with two pieces kebab.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Lamb Kabab <span>$9.99</span></h3>
+                <p>Delicious lamb kebab cooked with onion, ginger, pepper, chili, salt, and spices. One order comes with two pieces kebab.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chapli Kabab <span>$11.99</span></h3>
+                <p>A delicious kebab cooked with egg, onion, ginger, pepper, chili, salt, and spices. One order comes with two pieces kebab.</p>
+            </div>
+        </div>
+
+        <!-- Naan -->
+        <h3 class="category-title">Naan</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Plain Naan <span>$2.49</span></h3>
+                <p>Traditional Indian Flat Bread</p>
+            </div>
+            <div class="menu-item">
+                <h3>Garlic Naan <span>$3.49</span></h3>
+                <p>Garlic stuffed bread with fine flour and milk</p>
+            </div>
+            <div class="menu-item">
+                <h3>Til Naan <span>$3.49</span></h3>
+                <p>Traditional Indian Flat Bread with sesame</p>
+            </div>
+        </div>
+
+        <!-- Kabab Roll -->
+        <h3 class="category-title">Kabab Roll</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Kabab Roll <span>$9.99</span></h3>
+            </div>
+            <div class="menu-item">
+                <h3>Beef Kabab Roll <span>$10.99</span></h3>
+            </div>
+            <div class="menu-item">
+                <h3>Lamb Kabab Roll <span>$9.99</span></h3>
+            </div>
+        </div>
+
+        <!-- New York Style Gyro -->
+        <h3 class="category-title">New York Style Gyro</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Gyro <span>$9.99</span></h3>
+                <p>Packed with well-seasoned chicken, our house sauce, lettuce, tomatoes, and onions.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Beef Gyro <span>$9.99</span></h3>
+                <p>Packed with tender lamb, our house sauce, lettuce, tomatoes, and onions.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Mix Gyro <span>$9.99</span></h3>
+                <p>A scrumptious gyro filled with chicken and lamb, our house sauce, lettuce, tomatoes, and onions.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Roll <span>$8.99</span></h3>
+            </div>
+            <div class="menu-item">
+                <h3>Beef Roll <span>$8.99</span></h3>
+            </div>
+            <div class="menu-item">
+                <h3>Mix Roll <span>$8.99</span></h3>
+            </div>
+        </div>
+
+        <!-- Vegetable Dishes -->
+        <h3 class="category-title">Vegetable Dishes</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Aloo+Palak <span>$9.99</span></h3>
+                <p>Fresh chopped spinach and potatoes cooked with ginger, tomato, and an assortment of traditional spices.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Bhendi/Okra <span>$9.99</span></h3>
+                <p>Fresh okra cooked with chopped onions and a variety of traditional spices.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chana Masala <span>$9.99</span></h3>
+                <p>Chickpeas cooked in a traditional spice with onion, ginger and garlic.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Mash Dal <span>$9.99</span></h3>
+                <p>Lentils mashed, tempered and flavored with traditional spices.</p>
+            </div>
+        </div>
+
+        <!-- Chicken Dishes -->
+        <h3 class="category-title">Chicken Dishes</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Kadai <span>$12.99</span></h3>
+                <p>This typical Pakistani and North Indian dish is stir-fried with spicy taste and tender chicken.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Korma <span>$12.99</span></h3>
+                <p>A dish originating in South Asia made up of rich and tender chicken and vegetables braised in a spiced sauce.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Tikka Masala <span>$12.99</span></h3>
+                <p>A dish of roasted chunks of chicken tikka in a spicy, creamy, and orange-colored sauce.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Butter Chicken <span>$12.99</span></h3>
+            </div>
+        </div>
+
+        <!-- Goat Dishes -->
+        <h3 class="category-title">Goat Dishes</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Goat Kadai <span>$14.99</span></h3>
+                <p>A combination of tender goat cooked with onions, tomato, and chili powder.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Goat Korma <span>$14.99</span></h3>
+                <p>A rich dish consisting of goat and vegetables braised in a spiced sauce.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Aloo Keema <span>$13.99</span></h3>
+                <p>A flavorful Indian dish made up of minced meat, potatoes, and a variety of traditional spices.</p>
+            </div>
+        </div>
+
+        <!-- Special Dishes -->
+        <h3 class="category-title">Special Dishes</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Beef Nihari <span>$18.99</span></h3>
+                <p>Beef chunks simmered overnight with a special blend of spices resulting in extremely tender morsels of meat, including flavorful bone marrow. Served with coriander leaves, fried onions, green chilies, stripes of ginger, and lemon.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Lamb Nihari <span>$18.99</span></h3>
+                <p>Lamb shanks simmered overnight with a special blend of spices resulting in extremely tender morsels of meat, including flavorful bone marrow. Served with coriander leaves, fried onions, green chilies, stripes of ginger, and lemon.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Goat Haleem <span>$17.99</span></h3>
+                <p>Pasty meat dish, prepared with wheat, barley, meat, lentils and spices. The dish is slow cooked for seven to eight hours, resulting in a flavorful paste-like consistency. Served with coriander leaves, fried onions, green chilies, chopped ginger, and lemon.</p>
+            </div>
+        </div>
+
+        <!-- Rice -->
+        <h3 class="category-title">Rice</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Kabab + Rice <span>$14.99</span></h3>
+                <p>Flavorful chicken kebab with onion, ginger, pepper, chili, salt, and spices. This dish comes with rice. One order comes with two pieces kebab.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Beef Kabab + Rice <span>$15.99</span></h3>
+                <p>Delicious beef kebab with onion, ginger, pepper, chili, salt, and spices. This dish comes with rice. One order comes with two pieces kebab.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Tikka + Rice <span>$14.99</span></h3>
+                <p>Boneless chicken marinated in Tandoori spices and cooked in a clay oven. This dish is served with rice.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Plain Pulao Rice <span>$5.99</span></h3>
+                <p>Rice cooked in a seasoned broth and served fluffy and rich.</p>
+            </div>
+        </div>
+
+        <!-- Biryani -->
+        <h3 class="category-title">Biryani</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Chicken Biryani <span>$12.99</span></h3>
+                <p>A delicious rice dish seasoned with traditional spices, served with chicken and mixed vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Boneless Biryani <span>$13.99</span></h3>
+                <p>A delicious rice dish seasoned with traditional spices, served with chicken and mixed vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Goat Biryani <span>$14.99</span></h3>
+                <p>A delicious rice dish seasoned with traditional spices, served with goat and mixed vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Beef Biryani <span>$15.99</span></h3>
+                <p>A delicious rice dish seasoned with traditional spices, served with beef and mixed vegetables.</p>
+            </div>
+        </div>
+
+        <!-- Sweets -->
+        <h3 class="category-title">Sweets</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Shahi Tukde/Double Ka Meetha <span>$7.99</span></h3>
+                <p>A bread pudding dessert of fried bread slices soaked in hot milk with traditional spices.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Kheer <span>$7.99</span></h3>
+                <p>A tasty rice pudding made by boiling rice, broken wheat, tapioca, or vermicelli, combined with milk and sugar.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Rasmalai <span>$5.99</span></h3>
+                <p>A soft cheese-like delectable dessert made in a creamy milk sauce.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Gulab Jamoon <span>$4.99</span></h3>
+            </div>
+        </div>
+
+        <!-- Drinks -->
+        <h3 class="category-title">Drinks</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Mango Lassi <span>$3.99</span></h3>
+                <p>A traditional yogurt-based drink with mango flavor.</p>
+            </div>
+            <div class="menu-item">
+                <h3>All Soda Cans <span>$1.99</span></h3>
+            </div>
+            <div class="menu-item">
+                <h3>Tea <span>$2.50</span></h3>
+            </div>
+        </div>
     </section>
 
     <section class="section" id="contact">
-        <h2>Visit Derakhyber</h2>
-
-        <p>
-            Come dine with us and experience the taste of Derakhyber.
-        </p>
+        <h2>Visit Dera Khyber Hyderabad</h2>
+        <p>Come dine with us and experience the genuine taste of tradition.</p>
     </section>
 
     <footer>
-        <p>© 2026 Derakhyber. All rights reserved.</p>
+        <p>© 2026 Dera Khyber Hyderabad. All rights reserved.</p>
     </footer>
 
 </body>
